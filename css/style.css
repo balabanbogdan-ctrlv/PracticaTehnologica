@@ -1,0 +1,503 @@
+/* ==========================================================================
+   1. IMPORT FONTURI (GOOGLE FONTS - Conform specificațiilor)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ==========================================================================
+   2. VARIABILE ȘI SETĂRI DE BAZĂ (Paletă de culori cerută)
+   ========================================================================== */
+:root {
+  --primary-brown: #8b4513;        /* Maro cald principal */
+  --primary-brown-deep: #5a2d0c;   /* Maro închis pentru elemente de contrast */
+  --custom-gold: #daa520;          /* Accent: Auriu stabilit */
+  --light-cream: #fdfbf7;          /* Neutru crem deschis */
+  --dark-cream: #f5ebe0;           /* Neutru crem închis */
+  --ink: #2b241f;
+  --muted: #6b6258;
+  --line: rgba(139, 69, 19, 0.12);
+  --shadow-soft: 0 10px 30px -12px rgba(139, 69, 19, 0.18);
+  --shadow-lift: 0 22px 50px -20px rgba(139, 69, 19, 0.28);
+  --radius: 18px;
+  --radius-lg: 26px;
+  --transition-smooth: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+  background-color: var(--light-cream);
+  color: var(--ink);
+  padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, .navbar-brand span, .footer-section h2, .footer-section h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.lead { font-weight: 400; color: var(--muted); }
+body .text-muted { color: var(--muted); }
+
+/* ---------- Navigație (Fixed top, active state) ---------- */
+body .navbar {
+  background-color: rgba(251, 248, 243, 0.78);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  transition: var(--transition-smooth);
+}
+body .navbar-brand { color: var(--primary-brown-deep); font-size: 1.35rem; }
+.navbar-logo { height: 40px; width: auto; }
+
+body .navbar-nav .nav-link,
+body .navbar .nav-link {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: var(--transition-smooth);
+}
+body .navbar .nav-link:hover { color: var(--primary-brown); background: rgba(122, 74, 43, 0.06); }
+body .navbar .nav-link.active {
+  color: var(--primary-brown-deep);
+  background: rgba(201, 162, 90, 0.18);
+}
+.navbar-toggler { border: none; }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%237a4a2b' stroke-width='2' stroke-linecap='round' d='M4 8h22M4 15h22M4 22h22'/%3E%3C/svg%3E");
+}
+
+/* ---------- Hero ---------- */
+.hero-bg, .hero-bg-txt {
+  position: relative;
+  padding: 130px 0 110px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(43, 36, 31, 0.55) 0%, rgba(43, 36, 31, 0.25) 60%, rgba(122, 74, 43, 0.35) 100%),
+    url("../img/hero/hero-bg-txt.png") center/cover no-repeat;
+}
+.hero-bg {
+  background:
+    linear-gradient(135deg, rgba(43, 36, 31, 0.55) 0%, rgba(43, 36, 31, 0.25) 60%, rgba(122, 74, 43, 0.35) 100%),
+    url("../img/hero/hero-bg.png") center/cover no-repeat;
+}
+.hero-bg h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.25);
+  text-align: center;
+}
+body .hero-bg-txt .lead, body .hero-bg .lead {
+  color: rgba(255,255,255,0.92);
+  max-width: 560px;
+  font-size: 1.1rem;
+}
+
+/* ---------- Secțiuni ---------- */
+.section-padding { padding: 90px 0; }
+
+body .bg-cream-dark {
+  background-color: var(--dark-cream);
+  border-radius: var(--radius-lg);
+  margin: 0 16px;
+}
+.lead {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
+}
+.section-title {
+  color: var(--primary-brown-deep);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 14px;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--custom-gold);
+  border-radius: 999px;
+  margin: 18px auto 0;
+}
+.text-md-start .section-title::after { margin-left: 0; }
+
+/* ---------- Carduri ---------- */
+.custom-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(201, 162, 90, 0.45);
+}
+.custom-card .card-img-top {
+  border-radius: 0;
+  transition: transform 0.6s ease;
+}
+.custom-card:hover .card-img-top { transform: scale(1.04); }
+.custom-card .card-body { padding: 22px 24px 26px; }
+.custom-card .card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: var(--primary-brown-deep);
+  margin-bottom: 8px;
+}
+
+/* "De ce La Bunica" icon pills */
+body .bg-cream-dark .p-3 > .mb-3 {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 18px;
+}
+body .bg-cream-dark .p-3 i { color: var(--primary-brown); font-size: 1.6rem; }
+
+/* ---------- Recenziile ---------- */
+.testimonial-item {
+  padding: 44px 36px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+.testimonial-item p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: var(--ink);
+  font-size: 1.15rem;
+}
+.testimonial-item i { color: var(--custom-gold); font-size: 1.4rem; }
+body .testimonial-item h4 {
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: var(--primary-brown);
+  border-radius: 50%;
+  padding: 22px;
+  background-size: 45% 45%;
+}
+
+/* ---------- Butoane ---------- */
+.btn { border-radius: 999px; padding: 12px 26px; font-weight: 500; letter-spacing: 0.01em; }
+.btn-lg { padding: 14px 30px; font-size: 1rem; }
+
+.btn-custom-gold {
+  background-color: var(--custom-gold);
+  color: #fff;
+  border: 1px solid var(--custom-gold);
+  box-shadow: 0 10px 22px -10px rgba(201,162,90,0.6);
+  transition: var(--transition-smooth);
+}
+.btn-custom-gold:hover {
+  background-color: #b8881a;
+  border-color: #b8881a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-custom-outline {
+  background-color: rgba(255,255,255,0.06);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  transition: var(--transition-smooth);
+}
+.btn-custom-outline:hover {
+  background-color: #fff;
+  color: var(--primary-brown-deep);
+  border-color: #fff;
+}
+
+.btn-primary, .btn-success {
+  background-color: var(--primary-brown);
+  border-color: var(--primary-brown);
+}
+.btn-primary:hover, .btn-success:hover {
+  background-color: var(--primary-brown-deep);
+  border-color: var(--primary-brown-deep);
+}
+
+/* ---------- Formulare ---------- */
+.form-control, .form-select {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 12px 14px;
+  transition: var(--transition-smooth);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--custom-gold);
+  box-shadow: 0 0 0 4px rgba(201,162,90,0.18);
+}
+.form-label { font-weight: 500; color: var(--ink); }
+
+/* ---------- Galerie ---------- */
+.gallery-img-container {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+}
+.gallery-img-container img { transition: transform 0.6s ease, filter 0.4s ease; }
+.gallery-img-container:hover img { transform: scale(1.06); filter: brightness(85%); }
+
+.lightbox-overlay {
+  position: fixed; inset: 0;
+  background: rgba(20, 14, 10, 0.92);
+  backdrop-filter: blur(6px);
+  z-index: 2000; display: none;
+  align-items: center; justify-content: center;
+}
+.lightbox-img {
+  max-width: 88%; max-height: 82vh;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute; top: 24px; right: 28px;
+  color: #fff; font-size: 2.2rem; cursor: pointer;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition-smooth);
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+/* ---------- 3. FOOTER COMPLET ---------- */
+footer {
+  background-color: #2b1b12; 
+  color: #cfc6bd;
+  padding: 70px 0 40px;
+  margin-top: 60px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+footer .footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+footer .footer-section {
+  flex: 1;
+}
+
+footer .quick-links {
+  flex: 1.2;
+}
+
+footer .footer-section h2,
+footer .footer-section h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--custom-gold);
+  font-weight: 700;
+  margin-bottom: 22px;
+  letter-spacing: -0.01em;
+}
+
+footer .brand-info h2 {
+  font-size: 2.1rem;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+footer .brand-info p {
+  font-family: "Open Sans", sans-serif;
+  color: #cfc6bd;
+  line-height: 1.6;
+  max-width: 290px;
+  font-size: 0.95rem;
+}
+
+footer .footer-section h3 {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+footer .quick-links ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+footer .contact-info ul li,
+footer .schedule ul li {
+  margin-bottom: 14px;
+}
+
+footer ul li.align-start {
+  align-items: flex-start;
+}
+
+footer a {
+  color: #cfc6bd;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+footer a:hover {
+  color: var(--custom-gold);
+}
+
+/* Modificare: Am mărit margin-right de la 14px la 20px pentru a depărta iconițele de text */
+footer .footer-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px; 
+  color: var(--custom-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.schedule-days {
+  display: block;
+  color: #cfc6bd;
+}
+
+/* Modificare: Am mărit gap-ul de la 16px la 24px pentru a depărta iconițele sociale între ele */
+footer .social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 24px; 
+}
+
+footer .social-icons a {
+  color: #cfc6bd;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: var(--transition-smooth);
+}
+
+footer .social-icons a svg {
+  width: 22px;
+  height: 22px;
+}
+
+footer .social-icons a:hover {
+  background: transparent;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ---------- Back to top ---------- */
+#backToTop {
+  position: fixed; bottom: 24px; right: 24px;
+  background: var(--primary-brown);
+  color: #fff;
+  border: none;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  display: none;
+  z-index: 99;
+  box-shadow: var(--shadow-lift);
+  transition: var(--transition-smooth);
+}
+#backToTop:hover { background: var(--custom-gold); transform: translateY(-3px); }
+
+/* ---------- Micro-animații ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section-padding > .container > *,
+.hero-bg-txt .col-md-8, .hero-bg .col-md-8 {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* ==========================================================================
+   4. CELE 3 BREAKPOINT-URI STRICTE
+   ========================================================================== */
+
+/* BREAKPOINT DESKTOP (Ecrane mari sau egale cu 1200px) */
+@media (min-width: 1200px) {
+  footer .footer-container {
+    flex-direction: row; 
+    padding: 0 40px;
+  }
+}
+
+/* BREAKPOINT TABLETĂ (Între 768px și 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .section-padding { padding: 75px 0; }
+  
+  footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  footer .brand-info p {
+    max-width: 100%;
+  }
+}
+
+/* BREAKPOINT MOBIL (Ecrane mai mici de 768px) */
+@media (max-width: 767px) {
+  .section-padding { padding: 60px 0; }
+  body .bg-cream-dark { margin: 0 8px; }
+  .hero-bg, .hero-bg-txt { padding: 90px 0 70px; border-radius: 0 0 var(--radius) var(--radius); }
+  
+  footer .footer-container {
+    flex-direction: column;
+    padding: 0 30px;
+    gap: 35px;
+  }
+  
+  footer .footer-section {
+    width: 100%;
+  }
+  
+  footer .brand-info p {
+    max-width: 100%;
+  }
+
+  footer .quick-links ul {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
