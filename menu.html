@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meniu Tradițional - Restaurant La Bunica</title>
+    <meta name="description" content="Explorează meniul nostru plin de bunătăți: ciorbe calde, feluri principale gătite lent și deserturi care îți aduc aminte de copilărie.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="img/png" href="img/logo32.svg">
+</head>
+<body>
+
+<header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/logo64.svg" alt="Logo La Bunica" class="navbar-logo me-2">
+                    <span class="fw-bold">La Bunica</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="menu.html">Meniu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservations.html">Rezervări</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-bg py-5 text-center text-white">
+            <div class="container py-4">
+                <h1 class="display-4 fw-bold">Meniul Nostru</h1>
+                <p class="lead text-light">Bucate alese, gătite cu dragoste și ingrediente curate</p>
+            </div>
+        </section>
+
+        <section class="section-padding container">
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+                <button class="btn btn-custom-gold filter-btn active" data-filter="all">Toate</button>
+                <button class="btn btn-custom-outline text-dark border-secondary filter-btn" data-filter="ciorbe">Ciorbe / Supe</button>
+                <button class="btn btn-custom-outline text-dark border-secondary filter-btn" data-filter="principale">Feluri Principale</button>
+                <button class="btn btn-custom-outline text-dark border-secondary filter-btn" data-filter="deserturi">Deserturi</button>
+                <button class="btn btn-custom-outline text-dark border-secondary filter-btn" data-filter="bauturi">Băuturi</button>
+            </div>
+
+            <div class="row g-4" id="menu-grid">
+                <div class="col-md-6 col-lg-4 menu-item" data-category="ciorbe">
+                    <div class="card custom-card h-100">
+                        <div class="position-relative">
+                            <img src="img/menu/ciorba_radauteana.png" class="card-img-top img-fluid" alt="Ciorbă Rădăuțeană" style="height: 200px; object-fit: cover;">
+                            <span class="position-absolute top-0 end-0 bg-dark text-warning p-2 m-2 fw-bold rounded">65 MDL</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Ciorbă Rădăuțeană</h3>
+                            <p class="card-text text-muted small">Pregătită cu piept de pui fraged, usturoi, smântână din belșug și acrită natural cu oțet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 menu-item" data-category="principale">
+                    <div class="card custom-card h-100">
+                        <div class="position-relative">
+                            <img src="img/menu/sarmale.png" class="card-img-top img-fluid" alt="Sarmale cu mămăligă" style="height: 200px; object-fit: cover;">
+                            <span class="position-absolute top-0 end-0 bg-dark text-warning p-2 m-2 fw-bold rounded">85 MDL</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Sarmale ca la Bunica</h3>
+                            <p class="card-text text-muted small">Amestec de carne de porc și vită, învelite în varză murată, servite cu mămăligă și ardei iute.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 menu-item" data-category="principale">
+                    <div class="card custom-card h-100">
+                        <div class="position-relative">
+                            <img src="img/menu/tochitura.jpg" class="card-img-top img-fluid" alt="Tochitură" style="height: 200px; object-fit: cover;">
+                            <span class="position-absolute top-0 end-0 bg-dark text-warning p-2 m-2 fw-bold rounded">110 MDL</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Tochitură Moldovenească</h3>
+                            <p class="card-text text-muted small">Pulpa de porc, cârnați de casă, brânză de oi, ou ochi și mămăliguță la ceaun.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 menu-item" data-category="deserturi">
+                    <div class="card custom-card h-100">
+                        <div class="position-relative">
+                            <img src="img/menu/papanasi.png" class="card-img-top img-fluid" alt="Papanași cu dulceață" style="height: 200px; object-fit: cover;">
+                            <span class="position-absolute top-0 end-0 bg-dark text-warning p-2 m-2 fw-bold rounded">55 MDL</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Papanași Pufoși cu Afine</h3>
+                            <p class="card-text text-muted small">Brânză dulce de vaci, smântână fermentată și dulceață artizanală de afine sălbatice.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 menu-item" data-category="deserturi">
+                    <div class="card custom-card h-100">
+                        <div class="position-relative">
+                            <img src="img/menu/clatite.png" class="card-img-top img-fluid" alt="Clătite cu brânză și stafide" style="height: 200px; object-fit: cover;">
+                            <span class="position-absolute top-0 end-0 bg-dark text-warning p-2 m-2 fw-bold rounded">45 MDL</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Clătite Domnești</h3>
+                            <p class="card-text text-muted small">Clătite fine umplute cu brânză de vaci, stafide și coajă de lămâie, coapte la cuptor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 menu-item" data-category="bauturi">
+                    <div class="card custom-card h-100">
+                        <div class="position-relative">
+                            <img src="img/menu/socata.png" class="card-img-top img-fluid" alt="Socată de casă" style="height: 200px; object-fit: cover;">
+                            <span class="position-absolute top-0 end-0 bg-dark text-warning p-2 m-2 fw-bold rounded">25 MDL</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Socată Tradițională</h3>
+                            <p class="card-text text-muted small">Băutură răcoritoare naturală obținută prin fermentarea florilor de soc cu lămâie și miere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-info">
+                <h2>La Bunica</h2>
+                <p>Gustul autentic al copilăriei, pregătit cu dragoste și ingrediente locale.</p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Linkuri Rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="menu.html">Meniu</a></li>
+                    <li><a href="about.html">Despre noi</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="reservations.html">Rezervări</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Strada Tradiției Nr. 15, Cahul,<br> Republica Moldova</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+37329912345">+373 299 12 345</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@labunica.md">contact@labunica.md</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section schedule">
+                <h3>Program</h3>
+                <ul>
+                    <li>
+                        <i class="far fa-clock"></i>
+                        <span>Luni - Vineri: 10:00 - 22:00</span>
+                    </li>
+                    <li>
+                        <span>Sâmbătă - Duminică: 11:00 - 23:00</span>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2026 Restaurant La Bunica. Proiect de Practică Tehnologică.</p>
+    </footer>
+
+    <button id="backToTop" title="Mergi sus"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

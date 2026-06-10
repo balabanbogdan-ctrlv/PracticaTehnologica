@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant - La Bunica</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Restaurant La Bunica - Gust Tradițional și Atmosferă Familială</title>
+    <meta name="description"
+        content="Savori autentice românești la Restaurantul La Bunica. Ingrediente locale, rețete de familie și o ambianță caldă în inima orașului. Rezervă o masă acum!">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="img/png" href="img/logo32.svg">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
             <div class="container">
@@ -33,5 +40,227 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <section class="hero-bg-txt text-center text-md-start">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-6">
+                        <h1 class="display-3 fw-bold mb-3 text-white">Tradiția gustului de acasă</h1>
+                        <p class="mb-4 text-light">La Bunica readuce în farfurie secretele culinare transmise din
+                            generație în generație. Te așteptăm cu preparate calde și suflet curat.</p>
+                        <div
+                            class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start">
+                            <a href="menu.html" class="btn btn-custom-gold btn-lg">Vezi Meniul</a>
+                            <a href="reservations.html" class="btn btn-custom-outline btn-lg">Rezervă o Masă</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container text-center">
+            <h2 class="section-title">Specialitățile Casei</h2>
+            <p class="text-muted mb-5">Cele mai iubite bucate apreciate de oaspeții noștri destoinici</p>
+            <div class="row g-4">
+                <!-- Card 1: Sarmale -->
+                <div class="col-md-4">
+                    <div class="card custom-card h-100">
+                        <img src="img/menu/sarmale.png" class="card-img-top img-fluid"
+                            alt="Sarmale maramureșene cu mămăliguță" style="height: 220px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Sarmale ca la Bunica</h3>
+                            <p class="card-text text-muted">Învelite în frunză de varză murată, fierte la foc mic în
+                                ceaun de lut, servite cu smântână grasă.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Tochitură -->
+                <div class="col-md-4">
+                    <div class="card custom-card h-100">
+                        <img src="img/menu/tochitura.jpg" class="card-img-top img-fluid"
+                            alt="Tochitură moldovenească la ceaun" style="height: 220px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Tochitură Moldovenească</h3>
+                            <p class="card-text text-muted">Carne proaspătă de porc, cârnați afumați, ou ochi, brânză de
+                                burduf și mămăligă caldă.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Papanași -->
+                <div class="col-md-4">
+                    <div class="card custom-card h-100">
+                        <img src="img/menu/papanasi.png" class="card-img-top img-fluid"
+                            alt="Papanași cu dulceață de afine" style="height: 220px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="h5 card-title fw-bold">Papanași Pufoși</h3>
+                            <p class="card-text text-muted">Prăjiți exact cât trebuie, acoperiți din belșug cu smântână
+                                fină și dulceață de afine făcută în casă.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-cream-dark text-center">
+            <div class="container">
+                <h2 class="section-title">De ce „La Bunica”?</h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div class="mb-3 text-warning"><i class="fa-solid fa-leaf fa-3x"
+                                    style="color: var(--primary-brown);"></i></div>
+                            <h3 class="h5 fw-bold">Ingrediente Locale</h3>
+                            <p class="text-muted">Colaborăm exclusiv cu producători și ferme locale pentru legume
+                                proaspete și carne de cea mai bună calitate.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div class="mb-3 text-warning"><i class="fa-solid fa-utensils fa-3x"
+                                    style="color: var(--primary-brown);"></i></div>
+                            <h3 class="h5 fw-bold">Rețete Tradiționale</h3>
+                            <p class="text-muted">Nu facem compromisuri moderniste. Păstrăm procesele lente și tehnicile
+                                vechi românești.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div class="mb-3 text-warning"><i class="fa-solid fa-people-roof fa-3x"
+                                    style="color: var(--primary-brown);"></i></div>
+                            <h3 class="h5 fw-bold">Ambient Familial</h3>
+                            <p class="text-muted">Decorul cald cu elemente tradiționale te va face să te simți din nou
+                                în bucătăria caldă a copilăriei.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container text-center">
+            <h2 class="section-title">Ce spun oaspeții noștri</h2>
+            <div id="testimonialCarousel" class="carousel slide col-lg-8 mx-auto shadow-sm" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-item">
+                            <i class="fa-solid fa-quote-left mb-3"></i>
+                            <p class="lead italic">"Papanașii sunt o nebunie curată! Am simțit cu adevărat gustul
+                                copilăriei. Personalul este extrem de amabil și servirea rapidă."</p>
+                            <h4 class="h6 fw-bold mt-3 text-uppercase">— Andrei M., Chișinău</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item">
+                            <i class="fa-solid fa-quote-left mb-3"></i>
+                            <p class="lead italic">"Am organizat o masă de familie aici, iar bunicii au fost
+                                impresionați de autenticitatea sarmalelor. Un loc de nota 10!"</p>
+                            <h4 class="h6 fw-bold mt-3 text-uppercase">— Elena R., Cahul</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                    <span class="visually-hidden">Următor</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="section-padding bg-cream-dark">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-dark mb-4">Program de funcționare</h2>
+                        <ul class="list-unstyled lead">
+                            <li class="d-flex justify-content-between border-bottom py-2"><span>Luni - Vineri:</span>
+                                <strong>10:00 - 22:00</strong>
+                            </li>
+                            <li class="d-flex justify-content-between border-bottom py-2"><span>Sâmbătă:</span>
+                                <strong>09:00 - 23:00</strong>
+                            </li>
+                            <li class="d-flex justify-content-between border-bottom py-2"><span>Duminică:</span>
+                                <strong>09:00 - 21:00</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center text-md-start ps-md-5">
+                        <h2 class="fw-bold text-dark mb-4">Locația Noastră</h2>
+                        <p class="lead"><i class="fa-solid fa-location-dot me-2 text-danger"></i> Strada Trandafirilor,
+                            nr. 12, Cahul, Republica Moldova</p>
+                        <p class="lead"><i class="fa-solid fa-phone me-2 text-success"></i> +373 299 12 345</p>
+                        <a href="contact.html" class="btn btn-custom-gold mt-2">Vezi Harta Interactivă</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-info">
+                <h2>La Bunica</h2>
+                <p>Gustul autentic al copilăriei, pregătit cu dragoste și ingrediente locale.</p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Linkuri Rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="menu.html">Meniu</a></li>
+                    <li><a href="about.html">Despre noi</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="reservations.html">Rezervări</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Strada Tradiției Nr. 15, Cahul,<br> Republica Moldova</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+37329912345">+373 299 12 345</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@labunica.md">contact@labunica.md</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section schedule">
+                <h3>Program</h3>
+                <ul>
+                    <li>
+                        <i class="far fa-clock"></i>
+                        <span>Luni - Vineri: 10:00 - 22:00</span>
+                    </li>
+                    <li>
+                        <span>Sâmbătă - Duminică: 11:00 - 23:00</span>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2026 Restaurant La Bunica. Proiect de Practică Tehnologică.</p>
+    </footer>
+
+    <button id="backToTop" title="Mergi sus"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
