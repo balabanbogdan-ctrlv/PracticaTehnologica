@@ -448,9 +448,9 @@ footer .social-icons a:hover {
   animation: fadeUp 0.7s ease both;
 }
 
-/* ==========================================================================
+/* 
    4. CELE 3 BREAKPOINT-URI STRICTE
-   ========================================================================== */
+*/
 
 /* BREAKPOINT DESKTOP (Ecrane mari sau egale cu 1200px) */
 @media (min-width: 1200px) {
