@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervă o Masă - Restaurant La Bunica</title>
+    <meta name="description" content="Asigură-ți un loc la o masă plină de bunătăți. Rezervă simplu și rapid online pentru evenimente de familie sau o cină liniștită.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="img/png" href="img/logo32.svg">
+</head>
+<body>
+<header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/logo64.svg" alt="Logo La Bunica" class="navbar-logo me-2">
+                    <span class="fw-bold">La Bunica</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Meniu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservations.html">Rezervări</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-bg py-5 text-center text-white">
+            <div class="container py-4">
+                <h1 class="display-4 fw-bold">Rezervări Online</h1>
+                <p class="lead text-light">Pregătim masa, punem ștergarele curate și te așteptăm cu drag</p>
+            </div>
+        </section>
+
+        <section class="section-padding container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card custom-card p-4 p-md-5">
+                        <h2 class="text-center fw-bold mb-4" style="color: var(--primary-brown);">Formular de Rezervare</h2>
+                        <p class="text-center text-muted mb-5">Te rugăm să completezi datele de mai jos. Vei primi un SMS sau email de confirmare în cel mai scurt timp.</p>
+                        
+                        <form id="reservationForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="resName" class="form-label fw-bold">Nume și Prenume *</label>
+                                    <input type="text" class="form-control form-control-lg fs-6" id="resName" placeholder="Ex: Ion Popescu" required>
+                                    <div class="invalid-feedback">Numele trebuie să conțină doar litere (minim 3 caractere).</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="resPhone" class="form-label fw-bold">Număr Telefon *</label>
+                                    <input type="tel" class="form-control form-control-lg fs-6" id="resPhone" placeholder="Ex: 068XXXXXX sau +373..." required>
+                                    <div class="invalid-feedback">Introdu un număr de telefon valid din Republica Moldova.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="resEmail" class="form-label fw-bold">Adresă Email *</label>
+                                    <input type="email" class="form-control form-control-lg fs-6" id="resEmail" placeholder="nume@exemplu.com" required>
+                                    <div class="invalid-feedback">Te rugăm să introduci o adresă de email validă.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="resGuests" class="form-label fw-bold">Număr Persoane *</label>
+                                    <select class="form-select form-select-lg fs-6" id="resGuests" required>
+                                        <option value="" selected disabled>Alege numărul de locuri...</option>
+                                        <option value="1">1 Persoană</option>
+                                        <option value="2">2 Persoane</option>
+                                        <option value="3">3 Persoane</option>
+                                        <option value="4">4 Persoane</option>
+                                        <option value="5-8">5 - 8 Persoane</option>
+                                        <option value="9+">Eveniment Mare (9+)</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selectează numărul de oaspeți.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="resDate" class="form-label fw-bold">Data *</label>
+                                    <input type="date" class="form-control form-control-lg fs-6" id="resDate" required>
+                                    <div class="invalid-feedback">Selectează o dată validă din calendar.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="resTime" class="form-label fw-bold">Ora *</label>
+                                    <input type="time" class="form-control form-control-lg fs-6" id="resTime" required>
+                                    <div class="invalid-feedback">Selectează ora dorită pentru masă.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="resMessage" class="form-label fw-bold">Preferințe speciale / Mențiuni (Opțional)</label>
+                                    <textarea class="form-control fs-6" id="resMessage" rows="4" placeholder="Ex: Scaun pentru copil, masă la fereastră, alergii alimentare..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-custom-gold btn-lg w-100 py-3">Trimite Rezervarea</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="formAlertSuccess" class="alert alert-success d-none mt-4 text-center" role="alert">
+                            <i class="fa-solid fa-circle-check me-2"></i> Rezervarea dumneavoastră a fost trimisă cu succes! Vă contactăm imediat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-cream-dark text-center">
+            <div class="container">
+                <div class="row g-4" id="stats-section">
+                    <div class="col-6 col-md-3">
+                        <div class="p-3">
+                            <i class="fa-solid fa-calendar-days fa-2x mb-2" style="color: var(--primary-brown);"></i>
+                            <div class="display-5 fw-bold counter text-dark" data-target="11">0</div>
+                            <p class="text-muted text-uppercase small fw-bold mt-1">Ani de Tradiție</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3">
+                            <i class="fa-solid fa-users fa-2x mb-2" style="color: var(--primary-brown);"></i>
+                            <div class="display-5 fw-bold counter text-dark" data-target="4500">0</div>
+                            <p class="text-muted text-uppercase small fw-bold mt-1">Oaspeți Fericiți</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3">
+                            <i class="fa-solid fa-utensils fa-2x mb-2" style="color: var(--primary-brown);"></i>
+                            <div class="display-5 fw-bold counter text-dark" data-target="54">0</div>
+                            <p class="text-muted text-uppercase small fw-bold mt-1">Rețete Secrete</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3">
+                            <i class="fa-solid fa-award fa-2x mb-2" style="color: var(--primary-brown);"></i>
+                            <div class="display-5 fw-bold counter text-dark" data-target="12">0</div>
+                            <p class="text-muted text-uppercase small fw-bold mt-1">Premii Culinare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-info">
+                <h2>La Bunica</h2>
+                <p>Gustul autentic al copilăriei, pregătit cu dragoste și ingrediente locale.</p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Linkuri Rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="menu.html">Meniu</a></li>
+                    <li><a href="about.html">Despre noi</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="reservations.html">Rezervări</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Strada Tradiției Nr. 15, Cahul,<br> Republica Moldova</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+37329912345">+373 299 12 345</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@labunica.md">contact@labunica.md</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section schedule">
+                <h3>Program</h3>
+                <ul>
+                    <li>
+                        <i class="far fa-clock"></i>
+                        <span>Luni - Vineri: 10:00 - 22:00</span>
+                    </li>
+                    <li>
+                        <span>Sâmbătă - Duminică: 11:00 - 23:00</span>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2026 Restaurant La Bunica. Proiect de Practică Tehnologică.</p>
+    </footer>
+
+    <button id="backToTop" title="Mergi sus"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
