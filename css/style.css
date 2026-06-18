@@ -82,7 +82,7 @@ body .navbar .nav-link.active {
   overflow: hidden;
   background:
     linear-gradient(135deg, rgba(43, 36, 31, 0.55) 0%, rgba(43, 36, 31, 0.25) 60%, rgba(122, 74, 43, 0.35) 100%),
-    url("../img/hero/hero-bg-txt.png") center/cover no-repeat;
+    url("../img/hero/hero.jpg") center/cover no-repeat;
 }
 .hero-bg {
   background:
@@ -285,219 +285,192 @@ body .testimonial-item h4 {
 }
 .lightbox-close:hover { background: rgba(255,255,255,0.2); }
 
-/* ---------- 3. FOOTER COMPLET ---------- */
-footer {
-  background-color: #2b1b12; 
-  color: #cfc6bd;
-  padding: 70px 0 40px;
-  margin-top: 60px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+/* ==========================================================================
+   STILURI DE BAZĂ FOOTER
+   ========================================================================== */
+footer.footer {
+    background-color: #2b1b12 !important; /* Maroul închis din design */
+    color: #e0d0cc !important;
+    padding: 60px 0 20px 0 !important;
+    font-family: system-ui, -apple-system, sans-serif;
+    position: relative;
+    width: 100%;
 }
 
-footer .footer-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 40px;
-  gap: 40px;
+footer.footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Comportament implicit */
 }
 
-footer .footer-section {
-  flex: 1;
+/* Titluri secțiuni */
+footer.footer .footer-section h2, 
+footer.footer .footer-section h3 {
+    color: #cca43b !important; /* Auriu */
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-footer .quick-links {
-  flex: 1.2;
+footer.footer .footer-section p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #e0d0cc;
 }
 
-footer .footer-section h2,
-footer .footer-section h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  color: var(--custom-gold);
-  font-weight: 700;
-  margin-bottom: 22px;
-  letter-spacing: -0.01em;
+/* Stiluri liste și elemente */
+footer.footer .footer-section ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-footer .brand-info h2 {
-  font-size: 2.1rem;
-  margin-bottom: 12px;
-  margin-top: 0;
+footer.footer .footer-section ul li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #e0d0cc;
 }
 
-footer .brand-info p {
-  font-family: "Open Sans", sans-serif;
-  color: #cfc6bd;
-  line-height: 1.6;
-  max-width: 290px;
-  font-size: 0.95rem;
+/* Linkuri */
+footer.footer .footer-section a {
+    color: #e0d0cc !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
 }
 
-footer .footer-section h3 {
-  font-size: 1.3rem;
-  margin-top: 5px;
+footer.footer .footer-section a:hover {
+    color: #cca43b !important;
 }
 
-footer .quick-links ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 20px;
+/* Iconițe */
+footer.footer .footer-section ul li i {
+    color: #cca43b; /* Schimbat în auriu discret pentru contrast */
+    margin-top: 4px;
+    width: 16px;
+    text-align: center;
 }
 
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Grid intern pentru Linkuri Rapide pe Desktop/Tabletă */
+footer.footer .quick-links ul.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px;
 }
 
-footer ul li {
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
+/* Social Media Icons */
+footer.footer .social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
 }
 
-footer .contact-info ul li,
-footer .schedule ul li {
-  margin-bottom: 14px;
+footer.footer .social-icons a {
+    color: #e0d0cc !important;
+    font-size: 1.3rem !important;
+    transition: color 0.3s ease;
 }
 
-footer ul li.align-start {
-  align-items: flex-start;
+footer.footer .social-icons a:hover {
+    color: #cca43b !important;
 }
 
-footer a {
-  color: #cfc6bd;
-  text-decoration: none;
-  transition: var(--transition-smooth);
+/* Zona Copyright */
+footer.footer .footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    border-top: 1px solid rgba(224, 208, 204, 0.1);
+    padding: 20px 15px 0 15px;
+    text-align: center; /* Centrat pe mobil mod implicit */
 }
 
-footer a:hover {
-  color: var(--custom-gold);
+footer.footer .footer-bottom p {
+    font-size: 0.85rem;
+    color: rgba(224, 208, 204, 0.7);
+    margin: 0;
 }
 
-/* Modificare: Am mărit margin-right de la 14px la 20px pentru a depărta iconițele de text */
-footer .footer-icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 20px; 
-  color: var(--custom-gold);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
 
-.schedule-days {
-  display: block;
-  color: #cfc6bd;
-}
-
-/* Modificare: Am mărit gap-ul de la 16px la 24px pentru a depărta iconițele sociale între ele */
-footer .social-icons {
-  margin-top: 25px;
-  display: flex;
-  gap: 24px; 
-}
-
-footer .social-icons a {
-  color: #cfc6bd;
-  width: auto;
-  height: auto;
-  border-radius: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  transition: var(--transition-smooth);
-}
-
-footer .social-icons a svg {
-  width: 22px;
-  height: 22px;
-}
-
-footer .social-icons a:hover {
-  background: transparent;
-  color: #ffffff;
-  transform: translateY(-3px);
-}
-
-/* ---------- Back to top ---------- */
-#backToTop {
-  position: fixed; bottom: 24px; right: 24px;
-  background: var(--primary-brown);
-  color: #fff;
-  border: none;
-  width: 46px; height: 46px;
-  border-radius: 50%;
-  display: none;
-  z-index: 99;
-  box-shadow: var(--shadow-lift);
-  transition: var(--transition-smooth);
-}
-#backToTop:hover { background: var(--custom-gold); transform: translateY(-3px); }
-
-/* ---------- Micro-animații ---------- */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.section-padding > .container > *,
-.hero-bg-txt .col-md-8, .hero-bg .col-md-8 {
-  animation: fadeUp 0.7s ease both;
-}
-
-/* 
-   4. CELE 3 BREAKPOINT-URI STRICTE
-*/
-
-/* BREAKPOINT DESKTOP (Ecrane mari sau egale cu 1200px) */
+/* ==========================================================================
+   BREAKPOINT DESKTOP (Ecrane mari sau egale cu 1200px)
+   ========================================================================== */
 @media (min-width: 1200px) {
-  footer .footer-container {
-    flex-direction: row; 
+  footer.footer .footer-container {
+    flex-direction: row !important; 
+    justify-content: space-between;
     padding: 0 40px;
+  }
+
+  footer.footer .footer-section {
+    flex: 1;
+    max-width: 260px;
+  }
+
+  footer.footer .footer-bottom {
+    padding: 20px 40px 0 40px;
+    text-align: left; /* Aliniat la stânga pe ecrane mari */
   }
 }
 
-/* BREAKPOINT TABLETĂ (Între 768px și 1199px) */
+
+/* ==========================================================================
+   BREAKPOINT TABLETĂ (Între 768px și 1199px)
+   ========================================================================== */
 @media (min-width: 768px) and (max-width: 1199px) {
   .section-padding { padding: 75px 0; }
   
-  footer .footer-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  footer.footer .footer-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 40px;
     padding: 0 30px;
   }
 
-  footer .brand-info p {
+  footer.footer .brand-info p {
     max-width: 100%;
+  }
+
+  footer.footer .footer-bottom {
+    padding: 20px 30px 0 30px;
+    text-align: left;
   }
 }
 
-/* BREAKPOINT MOBIL (Ecrane mai mici de 768px) */
+
+/* ==========================================================================
+   BREAKPOINT MOBIL (Ecrane mai mici de 768px)
+   ========================================================================== */
 @media (max-width: 767px) {
   .section-padding { padding: 60px 0; }
   body .bg-cream-dark { margin: 0 8px; }
   .hero-bg, .hero-bg-txt { padding: 90px 0 70px; border-radius: 0 0 var(--radius) var(--radius); }
   
-  footer .footer-container {
-    flex-direction: column;
+  footer.footer .footer-container {
+    display: flex !important;
+    flex-direction: column !important; /* Forțează așezarea verticală */
     padding: 0 30px;
     gap: 35px;
   }
   
-  footer .footer-section {
-    width: 100%;
+  footer.footer .footer-section {
+    width: 100% !important;
   }
   
-  footer .brand-info p {
+  footer.footer .brand-info p {
     max-width: 100%;
   }
 
-  footer .quick-links ul {
-    grid-template-columns: 1fr;
+  /* Linkurile rapide trec obligatoriu pe un singur rând vertical pe mobil */
+  footer.footer .quick-links ul.links-grid {
+    grid-template-columns: 1fr !important;
     gap: 12px;
   }
-}
+
+  footer.footer .footer-bottom {
+    padding: 20px 30px 0 30px;
+    text-align: center;
+  }
+} 
