@@ -11,7 +11,7 @@
     <link rel="icon" type="img/png" href="img/logo32.svg">
 </head>
 <body>
-<header>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -49,7 +49,7 @@
                 <div class="col-lg-8">
                     <div class="card custom-card p-4 p-md-5">
                         <h2 class="text-center fw-bold mb-4" style="color: var(--primary-brown);">Formular de Rezervare</h2>
-                        <p class="text-center text-muted mb-5">Te rugăm să completezi datele de mai jos. Vei primi un SMS sau email de confirmare în cel mai scurt timp.</p>
+                        <p class="text-center text-muted mb-5">Te rugăm să completezi datele de mai jos. Vei primi un email automat de confirmare imediat.</p>
                         
                         <form id="reservationForm" novalidate>
                             <div class="row g-3">
@@ -101,7 +101,7 @@
                             </div>
                         </form>
                         <div id="formAlertSuccess" class="alert alert-success d-none mt-4 text-center" role="alert">
-                            <i class="fa-solid fa-circle-check me-2"></i> Rezervarea dumneavoastră a fost trimisă cu succes! Vă contactăm imediat.
+                            <i class="fa-solid fa-circle-check me-2"></i> Rezervarea dumneavoastră a fost trimisă! Verificați cutia poștală (e-mail) pentru confirmare.
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,6 @@
                 <h2>La Bunica</h2>
                 <p>Gustul autentic al copilăriei, pregătit cu dragoste și ingrediente locale.</p>
             </div>
-
             <div class="footer-section quick-links">
                 <h3>Linkuri Rapide</h3>
                 <ul>
@@ -162,7 +161,6 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
             <div class="footer-section contact-info">
                 <h3>Contact</h3>
                 <ul>
@@ -180,7 +178,6 @@
                     </li>
                 </ul>
             </div>
-
             <div class="footer-section schedule">
                 <h3>Program</h3>
                 <ul>
@@ -203,6 +200,13 @@
     </footer>
 
     <button id="backToTop" title="Mergi sus"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("8om7X4IdLRyPdnPD7");
+       })();
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
